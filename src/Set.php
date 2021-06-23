@@ -15,10 +15,11 @@ class Set implements SetInterface
 
     public function withValues(array $values)
     {
+        $values = array_unique($values, SORT_REGULAR);
         $this->assertValid($values);
 
         $copy = clone $this;
-        $copy->values = array_unique($values, SORT_REGULAR);
+        $copy->values = $values;
 
         return $copy;
     }
@@ -46,7 +47,7 @@ class Set implements SetInterface
         }
 
         $copy = clone $this;
-        unset($copy->values[$key]);
+        array_splice($copy->values, $key, 1);
 
         return $copy;
     }

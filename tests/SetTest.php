@@ -89,6 +89,18 @@ class SetTest extends TestCase
         $this->assertSame($copy, $same);
     }
 
+    public function testWithoutValueLeavesNoHoles()
+    {
+        $copy = $this->struct->withoutValue('blue');
+
+        $this->assertNotSame($this->struct, $copy);
+        $this->assertTrue($this->struct->hasValue('blue'));
+        $this->assertFalse($copy->hasValue('blue'));
+
+        $array = $copy->toArray();
+        $this->assertEquals($array, array_values($array));
+    }
+
     public function testWithValueAfter()
     {
         $set = new Set;
