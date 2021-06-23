@@ -1,13 +1,9 @@
-## Equip Structure
+## Pagely Structure
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/equip/structure.svg)](https://packagist.org/packages/equip/structure)
-[![License](https://img.shields.io/packagist/l/equip/structure.svg)](https://github.com/equip/structure/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/equip/structure.svg)](https://travis-ci.org/equip/structure)
-[![Code Coverage](https://scrutinizer-ci.com/g/equip/structure/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/equip/structure/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/equip/structure/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/equip/structure/?branch=master)
-[![Total Downloads](https://img.shields.io/packagist/dt/destrukt/destrukt.svg)](https://packagist.org/packages/destrukt/destrukt)
+This is a fork of equip/structure, updated for PHP8 compatability
 
-Provides a number of common data structures in [Equip](http://equip.github.io/)
+
+Provides a number of common data structures in [Equip](http://github.com/framework)
 that are not natively supported by PHP. Each structure is represented by an
 immutable object that can be counted and serialized to JSON. All of the structures
 can be used as [iterators][php-iterator] and [arrays][php-arrayaccess], but cannot
@@ -62,17 +58,15 @@ A set also also be added to before or after an existing element.
 
 The following versions of PHP are supported.
 
-* PHP 5.5
-* PHP 5.6
-* PHP 7.0
-* HHVM
+* PHP 7.4
+* PHP 8.0
 
 ## Install
 
 Via Composer
 
 ```bash
-$ composer require equip/structure
+$ composer require pagely/structure
 ```
 
 ## License

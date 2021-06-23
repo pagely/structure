@@ -1,5 +1,5 @@
 {
-    "name": "equip/structure",
+    "name": "pagely/structure",
     "description": "Simple, immutable data structures",
     "keywords": [
         "data structure",
@@ -17,17 +17,20 @@
         {
             "name": "Equip Contributors",
             "homepage": "https://github.com/equip"
+        },
+        {
+            "name": "Pagely",
+            "homepage": "https://github.com/pagely"
         }
     ],
     "require": {
-        "php": ">=5.5"
+        "php": "^7.3 | ^8.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.8|^5.0"
+        "phpunit/phpunit": "^9.0"
     },
     "replace": {
-        "shadowhand/destrukt": "self.version",
-        "destruktphp/destrukt": "self.version"
+        "equip/structure": "self.version"
     },
     "autoload": {
         "psr-4": {
