@@ -2,16 +2,13 @@
 
 namespace Equip\Structure;
 
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 class DictionaryTest extends TestCase
 {
-    /**
-     * @var Dictionary
-     */
-    protected $struct;
+    protected Dictionary $struct;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->struct = new Dictionary([
             'one'   => 1,
@@ -63,7 +60,7 @@ class DictionaryTest extends TestCase
 
     public function testWithValuesInvalid()
     {
-        $this->setExpectedException(ValidationException::class);
+        $this->expectException(ValidationException::class);
 
         $copy = $this->struct->withValues([1, 2, 3]);
     }

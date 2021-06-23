@@ -4,7 +4,7 @@ namespace Equip\Structure;
 
 class SortedDictionaryTest extends DictionaryTest
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->struct = new SortedDictionary([
             'one'   => 1,

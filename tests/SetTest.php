@@ -2,16 +2,13 @@
 
 namespace Equip\Structure;
 
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 class SetTest extends TestCase
 {
-    /**
-     * @var Set
-     */
-    private $struct;
+    private Set $struct;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->struct = new Set([
             'red',
@@ -59,7 +56,7 @@ class SetTest extends TestCase
 
     public function testWithValuesInvalid()
     {
-        $this->setExpectedException(ValidationException::class);
+        $this->expectException(ValidationException::class);
 
         $copy = $this->struct->withValues([
             'color' => 'magenta',

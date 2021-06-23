@@ -8,7 +8,7 @@ use Equip\Structure\ImmutableException;
 use Exception;
 use JsonSerializable;
 use Iterator;
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 use Serializable;
 
 class StructureTest extends TestCase
@@ -115,7 +115,7 @@ class StructureTest extends TestCase
     private function assertComparison($struct, $class)
     {
         $this->assertTrue($struct->isSimilar(new $class));
-        $this->assertFalse($struct->isSimilar($this->getMock(StructureInterface::class)));
+        $this->assertFalse($struct->isSimilar($this->createMock(StructureInterface::class)));
     }
 
     private function assertCountEmpty($struct)

@@ -2,16 +2,13 @@
 
 namespace Equip\Structure;
 
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 class UnorderedListTest extends TestCase
 {
-    /**
-     * @var UnorderedList
-     */
-    private $struct;
+    private UnorderedList $struct;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->struct = new UnorderedList([
             'red',
@@ -63,7 +60,7 @@ class UnorderedListTest extends TestCase
 
     public function testWithValuesInvalid()
     {
-        $this->setExpectedException(ValidationException::class);
+        $this->expectException(ValidationException::class);
 
         $copy = $this->struct->withValues([
             'color' => 'magenta',
